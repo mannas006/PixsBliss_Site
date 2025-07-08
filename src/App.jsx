@@ -96,7 +96,7 @@ function HomePage() {
           <HStack align="center" spacing={4}>
             <Image
               boxSize={{ base: '72px', md: '96px' }}
-              src={'/pixs_icon.png'}
+              src={'/icons/pixs_icon.png'}
               alt="PixsBliss App Icon"
               borderRadius="2xl"
               boxShadow="lg"
