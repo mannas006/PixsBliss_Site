@@ -33,8 +33,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import PrivacyPolicy from './PrivacyPolicy.jsx';
-import ContactUs from './ContactUs.jsx';
+import PrivacyPolicy from './components/PrivacyPolicy.jsx';
+import ContactUs from './components/ContactUs.jsx';
 
 // Actual screenshot file paths
 const screenshots = [
@@ -156,10 +156,10 @@ function HomePage() {
           <Text fontWeight="bold" fontSize="lg" mb={3} ml={1}>
             Preview
           </Text>
-          <Box bg={useColorModeValue('white', 'gray.800')} borderRadius="2xl" boxShadow="lg" px={{ base: 1, md: 4 }} py={4} w="full">
+          <Box bg={useColorModeValue('white', 'gray.50')} borderRadius="2xl" boxShadow="0 4px 24px rgba(0,0,0,0.08)" px={{ base: 1, md: 4 }} py={6} w="full" display="flex" justifyContent="center" alignItems="center">
             <Swiper
               modules={[Navigation, Pagination]}
-              spaceBetween={20}
+              spaceBetween={32}
               slidesPerView={1}
               navigation
               pagination={{ clickable: true }}
@@ -177,11 +177,12 @@ function HomePage() {
                       ratio={9 / 16}
                       w={{ base: '220px', sm: '260px', md: '320px', lg: '380px' }}
                       maxW="100%"
-                      boxShadow="2xl"
-                      bg="gray.100"
+                      bg="white"
+                      borderRadius="xl"
+                      boxShadow="0 2px 12px rgba(0,0,0,0.10)"
                       overflow="hidden"
                     >
-                      <img src={src} alt={`Screenshot ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0', boxShadow: '0 8px 32px rgba(0,0,0,0.22)' }} />
+                      <img src={src} alt={`Screenshot ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0', boxShadow: 'none' }} />
                     </AspectRatio>
                   </Box>
                 </SwiperSlide>
