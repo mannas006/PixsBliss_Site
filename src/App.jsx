@@ -29,17 +29,20 @@ import {
 } from '@chakra-ui/react';
 import { CheckCircleIcon, StarIcon, SettingsIcon, SearchIcon, DownloadIcon, LockIcon, ViewIcon, SunIcon, MoonIcon, RepeatIcon } from '@chakra-ui/icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import PrivacyPolicy from './PrivacyPolicy.jsx';
 import ContactUs from './ContactUs.jsx';
 
 // Actual screenshot file paths
 const screenshots = [
-  '/Screenshot 2025-07-07 at 1.00.15\u202FPM.png',
-  '/Screenshot 2025-07-07 at 1.00.33\u202FPM.png',
-  '/Screenshot 2025-07-07 at 1.00.49\u202FPM.png',
-  '/Screenshot 2025-07-07 at 1.01.05\u202FPM.png',
-  '/Screenshot 2025-07-07 at 12.59.57\u202FPM.png',
+  '/screenshots/adobe1.png',
+  '/screenshots/adobe2.png',
+  '/screenshots/adobe3.png',
+  '/screenshots/adobe4.png',
+  '/screenshots/adobe5.png',
 ];
 
 const features = [
@@ -93,7 +96,7 @@ function HomePage() {
           <HStack align="center" spacing={4}>
             <Image
               boxSize={{ base: '72px', md: '96px' }}
-              src={'/Adobe Express - file (3).png'}
+              src={'/pixs_icon.png'}
               alt="PixsBliss App Icon"
               borderRadius="2xl"
               boxShadow="lg"
@@ -153,22 +156,32 @@ function HomePage() {
           <Text fontWeight="bold" fontSize="lg" mb={3} ml={1}>
             Preview
           </Text>
-          <Box bg={useColorModeValue('white', 'gray.800')} borderRadius="2xl" boxShadow="lg" px={{ base: 1, md: 4 }} py={4}>
+          <Box bg={useColorModeValue('white', 'gray.800')} borderRadius="2xl" boxShadow="lg" px={{ base: 1, md: 4 }} py={4} w="full">
             <Swiper
+              modules={[Navigation, Pagination]}
               spaceBetween={20}
               slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
               breakpoints={{
                 480: { slidesPerView: 2 },
                 768: { slidesPerView: 3 },
                 1024: { slidesPerView: 4 },
               }}
-              style={{ paddingBottom: '1rem' }}
+              style={{ paddingBottom: '2.5rem', width: '100%' }}
             >
               {screenshots.map((src, index) => (
                 <SwiperSlide key={index}>
-                  <Box cursor="pointer" onClick={() => { setSelectedScreenshot(src); onOpen(); }}>
-                    <AspectRatio ratio={9 / 16} maxW="100%" borderRadius="2xl" boxShadow="2xl" bg="gray.100" overflow="hidden">
-                      <img src={src} alt={`Screenshot ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '24px', boxShadow: '0 6px 24px rgba(0,0,0,0.18)' }} />
+                  <Box cursor="pointer" onClick={() => { setSelectedScreenshot(src); onOpen(); }} display="flex" justifyContent="center">
+                    <AspectRatio
+                      ratio={9 / 16}
+                      w={{ base: '220px', sm: '260px', md: '320px', lg: '380px' }}
+                      maxW="100%"
+                      boxShadow="2xl"
+                      bg="gray.100"
+                      overflow="hidden"
+                    >
+                      <img src={src} alt={`Screenshot ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0', boxShadow: '0 8px 32px rgba(0,0,0,0.22)' }} />
                     </AspectRatio>
                   </Box>
                 </SwiperSlide>
