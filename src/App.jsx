@@ -38,11 +38,11 @@ import ContactUs from './components/ContactUs.jsx';
 
 // Actual screenshot file paths
 const screenshots = [
-  '/screenshots/adobe1.png',
+  '/screenshots/adobe5.png',
   '/screenshots/adobe2.png',
   '/screenshots/adobe3.png',
   '/screenshots/adobe4.png',
-  '/screenshots/adobe5.png',
+  '/screenshots/adobe1.png',
 ];
 
 const features = [
