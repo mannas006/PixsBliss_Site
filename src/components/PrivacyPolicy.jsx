@@ -140,10 +140,10 @@ function PrivacyPolicy() {
           </Text>
           <VStack align="start" pl={4}>
             <Text>
-              📧 <b>Email</b>: [] {/* Remember to update this email */}
+              📧 <b>Contact</b>: [https://pixs-bliss-site.vercel.app/contact-us] {/* Remember to update this email */}
             </Text>
             <Text>
-              🌐 <b>Website</b>: [your-website.com] {/* Remember to update this website */}
+              🌐 <b>Website</b>: [https://pixs-bliss-site.vercel.app] {/* Remember to update this website */}
             </Text>
           </VStack>
 
