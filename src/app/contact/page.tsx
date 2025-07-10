@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowLeft, Mail, MessageSquare, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Mail, MessageSquare, Phone, Send, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Contact() {
@@ -59,30 +59,6 @@ export default function Contact() {
       }, 5000);
     }
   };
-
-  const contactMethods = [
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Support",
-      description: "Get help with technical issues and general inquiries",
-      contact: "manasdey.iron006@gmail.com",
-      link: "mailto:manasdey.iron006@gmail.com"
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "General Inquiries",
-      description: "Questions about features, partnerships, or feedback",
-      contact: "manasdey.iron006@gmail.com",
-      link: "mailto:manasdey.iron006@gmail.com"
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Business Inquiries",
-      description: "For business partnerships and commercial opportunities",
-      contact: "manasdey.iron006@gmail.com",
-      link: "mailto:manasdey.iron006@gmail.com"
-    }
-  ];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
