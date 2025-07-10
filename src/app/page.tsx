@@ -353,63 +353,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#1E3A8A] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 mr-4">
-                  <Image
-                    src="/pixs_icon.png"
-                    alt="PixsBliss App Icon"
-                    fill
-                    className="rounded-lg"
-                  />
-                </div>
-                <h3 className="text-2xl font-bold">PixsBliss</h3>
-              </div>
-              <p className="text-white/80 mb-4 max-w-md">
-                Transform your device with stunning anime wallpapers. 
-                High-quality, curated content for anime lovers.
-              </p>
-              <div className="flex space-x-4">
-                <div className="flex items-center text-white/80">
-                  <Star className="w-4 h-4 mr-1 fill-yellow-400 text-yellow-400" />
-                  <span className="text-sm">4.8/5 Rating</span>
-                </div>
-                <div className="flex items-center text-white/80">
-                  <Heart className="w-4 h-4 mr-1 fill-red-400 text-red-400" />
-                  <span className="text-sm">10K+ Downloads</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-white/80">
-                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-                <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#download" className="hover:text-white transition-colors">Download</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-white/80">
-                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
-            <p>&copy; 2025 PixsBliss. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

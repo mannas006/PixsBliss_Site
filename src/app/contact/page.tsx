@@ -131,76 +131,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Methods */}
-            <motion.div
-              variants={fadeInUp}
-              initial="initial"
-              animate="animate"
-            >
-              <h2 className="text-2xl font-semibold text-[#1E3A8A] mb-6">
-                Contact Methods
-              </h2>
-              <div className="space-y-6">
-                {contactMethods.map((method, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-                    whileHover={{ y: -2 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-br from-[#1E3A8A] to-[#14B8A6] rounded-full flex items-center justify-center text-white">
-                          {method.icon}
-                        </div>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-[#1E3A8A] mb-2">
-                          {method.title}
-                        </h3>
-                        <p className="text-gray-600 mb-3">
-                          {method.description}
-                        </p>
-                        <a
-                          href={method.link}
-                          className="inline-flex items-center text-[#14B8A6] hover:text-[#1E3A8A] transition-colors font-medium"
-                        >
-                          {method.contact}
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-                             {/* Additional Info */}
-               <motion.div
-                 className="mt-8 bg-gradient-to-r from-[#1E3A8A]/10 to-[#14B8A6]/10 rounded-2xl p-6"
-                 initial={{ opacity: 0, y: 20 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ delay: 0.4 }}
-               >
-                 <h3 className="text-lg font-semibold text-[#1E3A8A] mb-3">
-                   Response Time
-                 </h3>
-                 <p className="text-gray-700 mb-4">
-                   We typically respond within 24 hours during business days. 
-                   For urgent technical issues, please include &quot;URGENT&quot; in your subject line.
-                 </p>
-                 <div className="flex items-center text-sm text-gray-600 mb-4">
-                   <MapPin className="w-4 h-4 mr-2" />
-                   <span>Global support available 24/7</span>
-                 </div>
-                 <div className="border-t border-gray-200 pt-4">
-                   <p className="text-xs text-gray-500">
-                     This form is powered by Formspree for secure message delivery.
-                   </p>
-                 </div>
-               </motion.div>
-            </motion.div>
-
-            {/* Contact Form */}
+          <div className="max-w-xl mx-auto">
             <motion.div
               variants={fadeInUp}
               initial="initial"
@@ -208,7 +139,7 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
             >
               <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-2xl font-semibold text-[#1E3A8A] mb-6">
+                <h2 className="text-4xl font-extrabold text-[#1E3A8A] mb-8 text-center tracking-tight">
                   Send us a Message
                 </h2>
                 
@@ -250,7 +181,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
                         placeholder="Your full name"
                       />
                     </div>
@@ -266,7 +197,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -281,7 +212,7 @@ export default function Contact() {
                         value={formData.subject}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
                       >
                         <option value="">Select a subject</option>
                         <option value="Technical Support">Technical Support</option>
@@ -304,7 +235,7 @@ export default function Contact() {
                         onChange={handleInputChange}
                         required
                         rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors resize-none placeholder:text-gray-500"
                         placeholder="Tell us how we can help you..."
                       />
                     </div>

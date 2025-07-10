@@ -218,11 +218,10 @@ export default function PrivacyPolicy() {
               <p className="text-gray-700 mb-4">
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
-              <div className="bg-gradient-to-r from-[#1E3A8A]/10 to-[#14B8A6]/10 rounded-lg p-4">
-                <p className="text-gray-700">
-                  <strong>Email:</strong> manasdey.iron006@gmail.com<br />
-                  <strong>Subject:</strong> Privacy Policy Inquiry
-                </p>
+              <div className="flex justify-center">
+                <a href="/contact" className="px-6 py-3 bg-[#14B8A6] text-white font-bold rounded-lg shadow hover:bg-[#1E3A8A] transition-colors text-lg">
+                  Contact Us
+                </a>
               </div>
             </motion.div>
           </div>
