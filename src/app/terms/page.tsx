@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowLeft, FileText, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function TermsOfService() {
@@ -154,7 +154,7 @@ export default function TermsOfService() {
                 Disclaimers and Limitations
               </h2>
               <p className="text-gray-700 mb-4">
-                PixsBliss is provided "as is" without warranties:
+                PixsBliss is provided &quot;as is&quot; without warranties:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>We do not guarantee uninterrupted service</li>

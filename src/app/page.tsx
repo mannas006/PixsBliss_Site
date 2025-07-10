@@ -12,11 +12,11 @@ import {
   Heart,
   Star,
   Smartphone,
-  Palette,
   Zap,
   CheckCircle
 } from 'lucide-react';
 import Carousel from './Carousel';
+import Link from 'next/link';
 
 interface UpdateData {
   apk_url: string;
@@ -389,7 +389,7 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-white/80">
-                <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
                 <li><a href="#download" className="hover:text-white transition-colors">Download</a></li>
               </ul>
@@ -398,9 +398,9 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-white/80">
-                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
-                <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
           </div>

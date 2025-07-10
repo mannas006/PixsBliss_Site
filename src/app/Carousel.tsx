@@ -18,7 +18,7 @@ export default function Carousel() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Snap to slide on drag end
-  const handleDragEnd = (event: any, info: any) => {
+  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: { point: { x: number } }) => {
     const width = containerRef.current?.offsetWidth || 1;
     let newIndex = Math.round(-info.point.x / width);
     newIndex = Math.max(0, Math.min(screenshots.length - 1, newIndex));

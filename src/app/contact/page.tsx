@@ -127,7 +127,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Have questions, feedback, or need support? We'd love to hear from you!
+              Have questions, feedback, or need support? We&apos;d love to hear from you!
             </p>
           </div>
 
@@ -186,7 +186,7 @@ export default function Contact() {
                  </h3>
                  <p className="text-gray-700 mb-4">
                    We typically respond within 24 hours during business days. 
-                   For urgent technical issues, please include "URGENT" in your subject line.
+                   For urgent technical issues, please include &quot;URGENT&quot; in your subject line.
                  </p>
                  <div className="flex items-center text-sm text-gray-600 mb-4">
                    <MapPin className="w-4 h-4 mr-2" />
@@ -225,7 +225,7 @@ export default function Contact() {
                       Message Sent!
                     </h3>
                     <p className="text-gray-600">
-                      Thank you for contacting us. We'll get back to you soon!
+                      Thank you for contacting us. We&apos;ll get back to you soon!
                     </p>
                   </motion.div>
                 ) : (
