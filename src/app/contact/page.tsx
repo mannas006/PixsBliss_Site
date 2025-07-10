@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowLeft, Mail, MessageSquare, Phone, Send, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Send, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Contact() {
