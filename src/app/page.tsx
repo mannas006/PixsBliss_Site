@@ -346,7 +346,7 @@ export default function Home() {
               ) : (
                 <span className="flex items-center">
                   <Download className="w-5 h-5 mr-2" />
-                  Download Now - It's Free!
+                  Download Now - It&apos;s Free!
                 </span>
               )}
             </button>
