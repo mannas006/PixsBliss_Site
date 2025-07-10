@@ -9,13 +9,11 @@ import {
   Image as ImageIcon, 
   Shield, 
   Heart,
-  Star,
   Smartphone,
   Zap,
   CheckCircle
 } from 'lucide-react';
 import Carousel from './Carousel';
-import Link from 'next/link';
 
 interface UpdateData {
   apk_url: string;
