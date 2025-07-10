@@ -201,7 +201,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Network access</strong> - to fetch wallpapers from the cloud</li>
               </ul>
               <p className="text-gray-700 mt-4">
-                These permissions are essential for the app's core functionality and are used only for their intended purposes.
+                These permissions are essential for the app&apos;s core functionality and are used only for their intended purposes.
               </p>
             </motion.div>
 
