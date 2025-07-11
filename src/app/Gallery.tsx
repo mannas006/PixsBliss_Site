@@ -42,21 +42,18 @@ export default function Gallery() {
           {screenshots.map((shot, i) => (
             <SwiperSlide key={shot.src}>
               <div
-                className="group relative rounded-3xl overflow-hidden shadow-xl bg-white border border-gray-100 transition-transform duration-300 hover:scale-105 cursor-pointer"
+                className="group relative rounded-3xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 cursor-pointer"
                 style={{ aspectRatio: "9/19" }}
                 onClick={() => setLightbox(i)}
               >
                 <Image
                   src={shot.src}
-                  alt={shot.alt}
+                  alt="App screenshot"
                   fill
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover w-full h-full transition-transform duration-300"
                   sizes="(max-width: 768px) 90vw, (max-width: 1200px) 40vw, 25vw"
                   priority={i === 0}
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1E3A8A]/80 to-transparent p-3 text-white text-sm opacity-80">
-                  {shot.alt}
-                </div>
               </div>
             </SwiperSlide>
           ))}
@@ -67,7 +64,7 @@ export default function Gallery() {
             <div className="relative max-w-md w-full aspect-[9/19] bg-black rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src={screenshots[lightbox].src}
-                alt={screenshots[lightbox].alt}
+                alt="App screenshot"
                 fill
                 className="object-contain w-full h-full"
               />
