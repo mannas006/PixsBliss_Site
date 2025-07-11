@@ -94,7 +94,7 @@ export default function Home() {
               <button
                 onClick={handleDownload}
                 disabled={isLoading || !apkUrl || downloadState === 'loading'}
-                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#1E3A8A] to-[#14B8A6] rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="group relative w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-[#1E3A8A] to-[#14B8A6] rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <div className="flex items-center">
@@ -135,7 +135,7 @@ export default function Home() {
               </button>
               {/* Show version below the button if available */}
               {apkVersion && (
-                <p className="text-xs text-gray-400 mt-1 text-center">v{apkVersion}</p>
+                <p className="text-sm sm:text-xs text-gray-400 mt-2 mb-1 text-center">v{apkVersion}</p>
               )}
               
               {apkUrl && (
@@ -202,7 +202,7 @@ export default function Home() {
             <button
               onClick={handleDownload}
               disabled={isLoading || !apkUrl || downloadState === 'loading'}
-              className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-[#1E3A8A] bg-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-[#1E3A8A] bg-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <div className="flex items-center">
