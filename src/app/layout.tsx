@@ -73,6 +73,30 @@ export default function RootLayout({
                   "@type": "Answer",
                   "text": "Yes! PixsBliss offers a wide range of high-quality anime wallpapers for free. Some premium content may be available in the future."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I get a refund if I have issues with a purchase?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Refunds are available only if payment was made but the wallpaper was not unlocked or the download did not complete. Please see our Refund & Cancellation Policy for details."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are all wallpapers anime-themed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, PixsBliss specializes in high-quality anime wallpapers curated for anime fans. All wallpapers are anime-themed."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will there be other types of wallpapers in the future?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Currently, PixsBliss focuses on anime wallpapers. We may consider expanding to other categories based on user feedback."
+                }
               }
             ]
           }

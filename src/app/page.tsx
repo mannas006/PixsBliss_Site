@@ -14,6 +14,8 @@ import {
   CheckCircle
 } from 'lucide-react';
 import Carousel from './Carousel';
+import Gallery from './Gallery';
+import FeaturesSection from './FeaturesSection';
 
 interface UpdateData {
   apk_url: string;
@@ -185,110 +187,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <Gallery />
+
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1E3A8A] mb-4">
-              Why Choose PixsBliss?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Experience the perfect blend of quality, performance, and beauty
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 rounded-2xl bg-gradient-to-br from-[#F9FAFB] to-white border border-gray-100 hover:shadow-lg transition-all duration-300"
-                variants={fadeInUp}
-                whileHover={{ y: -5 }}
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#1E3A8A] to-[#14B8A6] rounded-full text-white mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-[#1E3A8A] mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* App Preview Section */}
-      <section className="py-20 bg-gradient-to-br from-[#1E3A8A]/5 to-[#14B8A6]/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1E3A8A] mb-4">
-              Beautiful Design, Smooth Experience
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our app combines stunning visuals with intuitive navigation
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#1E3A8A] to-[#14B8A6] rounded-full text-white mb-4">
-                <Smartphone className="w-8 h-8" />
-              </div>
-              <h3 className="text-2xl font-semibold text-[#1E3A8A] mb-3">
-                Mobile-First Design
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Optimized for your mobile device with touch-friendly controls and responsive layout.
-              </p>
-            </div>
-
-            {/* Carousel Start */}
-            <div className="relative w-full flex flex-col items-center">
-              <Carousel />
-            </div>
-            {/* Carousel End */}
-
-            <div className="text-center lg:text-right">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#1E3A8A] to-[#14B8A6] rounded-full text-white mb-4">
-                <Zap className="w-8 h-8" />
-              </div>
-              <h3 className="text-2xl font-semibold text-[#1E3A8A] mb-3">
-                Lightning Fast
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick loading times and smooth animations ensure a premium user experience.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <FeaturesSection />
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
@@ -302,6 +205,18 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Is PixsBliss free to use?</h3>
               <p className="text-gray-700">Yes! PixsBliss offers a wide range of high-quality anime wallpapers for free. Some premium content may be available in the future.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Can I get a refund if I have issues with a purchase?</h3>
+              <p className="text-gray-700">Refunds are available only if payment was made but the wallpaper was not unlocked or the download did not complete. Please see our Refund & Cancellation Policy for details.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Are all wallpapers anime-themed?</h3>
+              <p className="text-gray-700">Yes, PixsBliss specializes in high-quality anime wallpapers curated for anime fans. All wallpapers are anime-themed.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Will there be other types of wallpapers in the future?</h3>
+              <p className="text-gray-700">Currently, PixsBliss focuses on anime wallpapers. We may consider expanding to other categories based on user feedback.</p>
             </div>
           </div>
         </div>
