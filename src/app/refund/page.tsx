@@ -65,6 +65,16 @@ export default function RefundPolicy() {
                 <Link href="/contact" className="inline-block mt-2 px-6 py-3 bg-[#14B8A6] text-white font-bold rounded-lg shadow hover:bg-[#1E3A8A] transition-colors text-lg">
                   👉 Apply for Refund
                 </Link>
+                <p className="mt-6 text-gray-700 text-base">
+                  Or email us directly at:
+                  <br />
+                  <a
+                    href="mailto:pixsbliss.app+refunds@gmail.com"
+                    className="text-[#14B8A6] font-semibold underline hover:text-[#1E3A8A] transition-colors"
+                  >
+                    pixsbliss.app+refunds@gmail.com
+                  </a>
+                </p>
               </div>
               <ul className="list-disc list-inside text-gray-700 mt-4">
                 <li>Your <strong>name</strong></li>
