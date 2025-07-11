@@ -18,6 +18,7 @@ interface UpdateData {
 
 export default function Home() {
   const [apkUrl, setApkUrl] = useState<string>('');
+  const [apkVersion, setApkVersion] = useState<string>(''); // Add version state
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string>('');
   const [downloadState, setDownloadState] = useState<'idle' | 'loading' | 'success'>('idle');
@@ -31,6 +32,7 @@ export default function Home() {
         }
         const data: UpdateData = await response.json();
         setApkUrl(data.apk_url);
+        setApkVersion(data.version); // Store version
       } catch (err) {
         setError('Unable to fetch download link');
         console.error('Error fetching APK URL:', err);
@@ -131,6 +133,10 @@ export default function Home() {
                   </span>
                 )}
               </button>
+              {/* Show version below the button if available */}
+              {apkVersion && (
+                <p className="text-xs text-gray-400 mt-1 text-center">v{apkVersion}</p>
+              )}
               
               {apkUrl && (
                 <p className="text-sm text-gray-500 mt-4 flex items-center justify-center">
@@ -157,11 +163,11 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">How do I download wallpapers?</h3>
               <p className="text-gray-700">Simply browse the collection, tap on your favorite wallpaper, and click the download button to save it to your device instantly.</p>
-            </div>
+                </div>
             <div>
               <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Is PixsBliss free to use?</h3>
               <p className="text-gray-700">Yes! PixsBliss offers a wide range of high-quality anime wallpapers for free. Some premium content may be available in the future.</p>
-            </div>
+        </div>
             <div>
               <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Can I get a refund if I have issues with a purchase?</h3>
               <p className="text-gray-700">Refunds are available only if payment was made but the wallpaper was not unlocked or the download did not complete. Please see our Refund & Cancellation Policy for details.</p>

@@ -84,26 +84,26 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-10"
         >
-          <div className="flex justify-center mb-6">
-            <div className="relative w-16 h-16">
-              <Image
-                src="/pixs_icon.png"
-                alt="PixsBliss App Icon"
-                fill
-                className="rounded-xl"
-              />
+            <div className="flex justify-center mb-6">
+              <div className="relative w-16 h-16">
+                <Image
+                  src="/pixs_icon.png"
+                  alt="PixsBliss App Icon"
+                  fill
+                  className="rounded-xl"
+                />
+              </div>
             </div>
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-[#1E3A8A] mb-4 text-center">
             About PixsBliss
-          </h1>
+            </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center">
             PixsBliss is your one-stop solution for stunning screenshots, seamless sharing, and effortless organization. Whether you’re a designer, developer, or everyday user, PixsBliss empowers you to capture, manage, and showcase your visuals with ease. Experience beautiful design, smooth performance, and powerful features—all in one app.
-          </p>
+            </p>
         </motion.div>
 
         {/* Connect Section */}
-        <motion.div
+            <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -112,136 +112,136 @@ export default function Contact() {
           <h2 className="text-2xl font-bold text-[#1E3A8A] mb-2 text-center">Connect</h2>
           <p className="text-center text-gray-700 mb-2">For support or inquiries, email us at:</p>
           <p className="text-center">
-            <a
+                        <a
               href="mailto:pixsbliss.app+support@gmail.com"
               className="text-[#14B8A6] font-semibold underline hover:text-[#1E3A8A] transition-colors"
             >
               pixsbliss.app+support@gmail.com
             </a>
           </p>
-        </motion.div>
+            </motion.div>
 
         {/* Contact Form Section */}
-        <motion.div
+            <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="bg-white rounded-2xl shadow-lg p-8">
+            >
+              <div className="bg-white rounded-2xl shadow-lg p-8">
             <h2 className="text-3xl font-extrabold text-[#1E3A8A] mb-8 text-center tracking-tight">
               Contact Form
-            </h2>
-            {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-8"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full text-green-600 mb-4">
-                  <CheckCircle className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold text-green-600 mb-2">
-                  Message Sent!
-                </h3>
-                <p className="text-gray-600">
-                  Thank you for contacting us. We&apos;ll get back to you soon!
-                </p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Honeypot field for spam protection */}
-                <input
-                  type="text"
-                  name="_gotcha"
-                  style={{ display: 'none' }}
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
+                </h2>
+                {isSubmitted ? (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-center py-8"
                   >
-                    <option value="">Select a subject</option>
-                    <option value="Technical Support">Technical Support</option>
-                    <option value="Feature Request">Feature Request</option>
-                    <option value="Bug Report">Bug Report</option>
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Business Partnership">Business Partnership</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={5}
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full text-green-600 mb-4">
+                      <CheckCircle className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-green-600 mb-2">
+                      Message Sent!
+                    </h3>
+                    <p className="text-gray-600">
+                  Thank you for contacting us. We&apos;ll get back to you soon!
+                    </p>
+                  </motion.div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Honeypot field for spam protection */}
+                    <input
+                      type="text"
+                      name="_gotcha"
+                      style={{ display: 'none' }}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                        Subject *
+                      </label>
+                      <select
+                        id="subject"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleInputChange}
+                        required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors placeholder:text-gray-500"
+                      >
+                        <option value="">Select a subject</option>
+                        <option value="Technical Support">Technical Support</option>
+                        <option value="Feature Request">Feature Request</option>
+                        <option value="Bug Report">Bug Report</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Business Partnership">Business Partnership</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
+                        rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-colors resize-none placeholder:text-gray-500"
-                    placeholder="Tell us how we can help you..."
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-[#1E3A8A] to-[#14B8A6] text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+                        placeholder="Tell us how we can help you..."
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-[#1E3A8A] to-[#14B8A6] text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5 mr-2" />
+                          Send Message
+                        </>
+                      )}
+                    </button>
+                  </form>
+                )}
           </div>
         </motion.div>
       </main>
