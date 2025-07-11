@@ -4,11 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Download, 
-  Sparkles, 
-  RefreshCw, 
-  Image as ImageIcon, 
   Shield, 
-  Heart,
   CheckCircle
 } from 'lucide-react';
 import Gallery from './Gallery';
