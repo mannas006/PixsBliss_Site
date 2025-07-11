@@ -290,6 +290,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">How do I download wallpapers?</h3>
+              <p className="text-gray-700">Simply browse the collection, tap on your favorite wallpaper, and click the download button to save it to your device instantly.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Is PixsBliss free to use?</h3>
+              <p className="text-gray-700">Yes! PixsBliss offers a wide range of high-quality anime wallpapers for free. Some premium content may be available in the future.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section id="download" className="py-20 bg-gradient-to-br from-[#1E3A8A] to-[#14B8A6]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

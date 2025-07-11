@@ -53,6 +53,30 @@ export default function RootLayout({
             }
           }
         `}</script>
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I download wallpapers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Simply browse the collection, tap on your favorite wallpaper, and click the download button to save it to your device instantly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is PixsBliss free to use?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! PixsBliss offers a wide range of high-quality anime wallpapers for free. Some premium content may be available in the future."
+                }
+              }
+            ]
+          }
+        `}</script>
       </head>
       <body
         className={`${inter.variable} font-sans antialiased`}
