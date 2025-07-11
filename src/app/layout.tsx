@@ -31,6 +31,28 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="253Sy6sdVEeF1YuGPApoBdZ7p3o2a2Ftgvews0PzBWc" />
+        <meta property="og:title" content="PixsBliss - Transform Your Screen with Stunning Anime Wallpapers" />
+        <meta property="og:description" content="Explore high-quality anime wallpapers curated just for you. Download PixsBliss and transform your device with beautiful wallpapers." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pixs-bliss-site.vercel.app/" />
+        <meta property="og:image" content="https://pixs-bliss-site.vercel.app/pixs_icon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PixsBliss - Transform Your Screen with Stunning Anime Wallpapers" />
+        <meta name="twitter:description" content="Explore high-quality anime wallpapers curated just for you. Download PixsBliss and transform your device with beautiful wallpapers." />
+        <meta name="twitter:image" content="https://pixs-bliss-site.vercel.app/pixs_icon.png" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "PixsBliss",
+            "url": "https://pixs-bliss-site.vercel.app/",
+            "description": "Explore high-quality anime wallpapers curated just for you. Download PixsBliss and transform your device with beautiful wallpapers.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "PixsBliss"
+            }
+          }
+        `}</script>
       </head>
       <body
         className={`${inter.variable} font-sans antialiased`}
