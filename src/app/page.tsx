@@ -9,11 +9,8 @@ import {
   Image as ImageIcon, 
   Shield, 
   Heart,
-  Smartphone,
-  Zap,
   CheckCircle
 } from 'lucide-react';
-import Carousel from './Carousel';
 import Gallery from './Gallery';
 import FeaturesSection from './FeaturesSection';
 
@@ -57,43 +54,6 @@ export default function Home() {
       setDownloadState('success');
       setTimeout(() => setDownloadState('idle'), 1200);
     }, 1000);
-  };
-
-  const features = [
-    {
-      icon: <Sparkles className="w-8 h-8" />,
-      title: "High-Quality Curated Wallpapers",
-      description: "Discover handpicked anime wallpapers in stunning resolution, carefully curated for the best visual experience."
-    },
-    {
-      icon: <RefreshCw className="w-8 h-8" />,
-      title: "Smooth Browsing Experience",
-      description: "Enjoy seamless navigation with pull-to-refresh functionality and smooth scrolling through thousands of wallpapers."
-    },
-    {
-      icon: <ImageIcon className="w-8 h-8" />,
-      title: "Instant Preview & Download",
-      description: "Preview wallpapers instantly and download them with a single tap. No waiting, no complications."
-    },
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Regular Updates",
-      description: "Get fresh content regularly with new categories and wallpapers added frequently to keep your collection growing."
-    }
-  ];
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
   };
 
   return (
