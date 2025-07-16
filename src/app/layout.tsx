@@ -102,7 +102,7 @@ export default function RootLayout({
           }
         `}</script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4991521917195620"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
       </head>
       <body
         className={`${inter.variable} font-sans antialiased`}
