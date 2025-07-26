@@ -169,8 +169,6 @@ export default function Home() {
               <p className="text-gray-700">Yes! PixsBliss offers a wide range of high-quality anime wallpapers for free. Some premium content may be available in the future.</p>
         </div>
             <div>
-              <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Can I get a refund if I have issues with a purchase?</h3>
-              <p className="text-gray-700">Refunds are available only if payment was made but the wallpaper was not unlocked or the download did not complete. Please see our Refund & Cancellation Policy for details.</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-[#14B8A6] mb-2">Are all wallpapers anime-themed?</h3>
