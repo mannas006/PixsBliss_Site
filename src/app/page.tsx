@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Download, 
@@ -10,45 +10,15 @@ import {
 import Gallery from './Gallery';
 import FeaturesSection from './FeaturesSection';
 
-interface UpdateData {
-  apk_url: string;
-  version: string;
-  release_date: string;
-}
-
 export default function Home() {
-  const [apkUrl, setApkUrl] = useState<string>('');
-  const [apkVersion, setApkVersion] = useState<string>(''); // Add version state
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string>('');
+  const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.pixsbliss.app.mobileApp';
   const [downloadState, setDownloadState] = useState<'idle' | 'loading' | 'success'>('idle');
 
-  useEffect(() => {
-    const fetchApkUrl = async () => {
-      try {
-        const response = await fetch('https://raw.githubusercontent.com/mannas006/PixsBliss_mobile_app/refs/heads/main/update.json');
-        if (!response.ok) {
-          throw new Error('Failed to fetch APK URL');
-        }
-        const data: UpdateData = await response.json();
-        setApkUrl(data.apk_url);
-        setApkVersion(data.version); // Store version
-      } catch (err) {
-        setError('Unable to fetch download link');
-        console.error('Error fetching APK URL:', err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchApkUrl();
-  }, []);
-
   const handleDownload = async () => {
-    if (!apkUrl || downloadState === 'loading') return;
+    if (downloadState === 'loading') return;
     setDownloadState('loading');
     setTimeout(() => {
-      window.open(apkUrl, '_blank');
+      window.open(playStoreUrl, '_blank');
       setDownloadState('success');
       setTimeout(() => setDownloadState('idle'), 1200);
     }, 1000);
@@ -93,20 +63,10 @@ export default function Home() {
             >
               <button
                 onClick={handleDownload}
-                disabled={isLoading || !apkUrl || downloadState === 'loading'}
+                disabled={downloadState === 'loading'}
                 className="group relative w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-[#1E3A8A] to-[#14B8A6] rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isLoading ? (
-                  <div className="flex items-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Loading...
-                  </div>
-                ) : error ? (
-                  <span className="flex items-center">
-                    <Shield className="w-5 h-5 mr-2" />
-                    Download Unavailable
-                  </span>
-                ) : downloadState === 'loading' ? (
+                {downloadState === 'loading' ? (
                   <motion.span
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -114,7 +74,7 @@ export default function Home() {
                     className="flex items-center"
                   >
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Preparing Download...
+                    Opening Play Store...
                   </motion.span>
                 ) : downloadState === 'success' ? (
                   <motion.span
@@ -124,26 +84,20 @@ export default function Home() {
                     className="flex items-center text-white"
                   >
                     <CheckCircle className="w-5 h-5 mr-2 text-white" />
-                    Download Started!
+                    Redirected to Play Store!
                   </motion.span>
                 ) : (
                   <span className="flex items-center">
                     <Download className="w-5 h-5 mr-2" />
-                    Download APK
+                    Download from Play Store
                   </span>
                 )}
               </button>
-              {/* Show version below the button if available */}
-              {apkVersion && (
-                <p className="text-sm sm:text-xs text-gray-400 mt-2 mb-1 text-center">v{apkVersion}</p>
-              )}
               
-              {apkUrl && (
-                <p className="text-sm text-gray-500 mt-4 flex items-center justify-center">
-                  <Shield className="w-4 h-4 mr-1" />
-                  APK file hosted securely on GitHub
-                </p>
-              )}
+              <p className="text-sm text-gray-500 mt-4 flex items-center justify-center">
+                <Shield className="w-4 h-4 mr-1" />
+                Available on Google Play Store
+              </p>
             </motion.div>
           </motion.div>
         </div>
@@ -199,20 +153,10 @@ export default function Home() {
             </p>
             <button
               onClick={handleDownload}
-              disabled={isLoading || !apkUrl || downloadState === 'loading'}
+              disabled={downloadState === 'loading'}
               className="group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold text-[#1E3A8A] bg-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isLoading ? (
-                <div className="flex items-center">
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#1E3A8A] mr-2"></div>
-                  Loading...
-                </div>
-              ) : error ? (
-                <span className="flex items-center">
-                  <Shield className="w-5 h-5 mr-2" />
-                  Download Unavailable
-                </span>
-              ) : downloadState === 'loading' ? (
+              {downloadState === 'loading' ? (
                 <motion.span
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -220,17 +164,17 @@ export default function Home() {
                   className="flex items-center"
                 >
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#1E3A8A] mr-2"></div>
-                  Preparing Download...
+                  Opening Play Store...
                 </motion.span>
               ) : downloadState === 'success' ? (
                 <motion.span
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
-                  className="flex items-center text-white"
+                  className="flex items-center"
                 >
-                  <CheckCircle className="w-5 h-5 mr-2 text-white" />
-                  Download Started!
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  Redirected to Play Store!
                 </motion.span>
               ) : (
                 <span className="flex items-center">
